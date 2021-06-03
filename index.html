@@ -7,8 +7,75 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container"> 
+      <form id="survey-form" action="" method="post" >
+        <h1 id="title">Application For Permission To Date My Daughter</h1>
+        <p id="description">Note: Form is to be completed at least 21 days prior to date</p>
       
+    <!----------- Personal Details ------------->
+        <div class="personal-details">
+          <fieldset>
+            <legend>Personal Details</legend>
+              <label id="name-label" for="name">
+                Name:
+                <input 
+                type="text" 
+                name="submitted-name" 
+                placeholder="Enter name here">
+              </label>
+              <label id="address-label" for="address">
+                Address:
+                <input 
+                type="text" 
+                id="address"
+                name="submitted-address" 
+                placeholder="Enter address here">
+              </label>  
+              <label id="email-label" for="email">Email:</label>
+                <input 
+                  type="email" 
+                  id="email"
+                  required name="user_email" 
+                  placeholder="Enter email here">
+              <label id="number-label" for="number">Phone Number:</label>
+                <input
+                  type="number"
+                  id="number"
+                  name="user_number" 
+                  placeholder="Enter 10 digit number"
+                  min="1" max="9">
+              <label id="iq-label" for="number">IQ:
+                <input
+                  type="number"
+                  id="iq"
+                  name="user_iq"
+                  placeholder="Enter IQ here"
+                >   
+              </label>  
+            
+              <label>Gender</label> 
+              <input 
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+              >
+              <label>Male</label>
+              <input 
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+              >
+              <label>Female</label>
+
+             <label>Date of Propsed Outing:</label> 
+             <input type="date" id="date" name="date">
+          </fieldset>
+          
+          
+        </div>
+      </form> 
     </div>
 
 
