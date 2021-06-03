@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
     <title>Survey Form</title>
   </head>
 
@@ -14,15 +17,14 @@
       
     <!----------- Personal Details ------------->
         <div class="personal-details">
-          <fieldset>
-            <legend>Personal Details</legend>
-              <label id="name-label" for="name">
-                Name:
-                <input 
-                type="text" 
-                name="submitted-name" 
-                placeholder="Enter name here">
-              </label>
+          <fieldset class="fieldset-details">
+            <legend class="details-title">Personal Details</legend>
+          <div class="name">
+            <label id="name-label" for="name">Name:
+              <input type="text" name="submitted-name" placeholder="Enter name here">
+            </label> <br>
+            </div> 
+            <div class="address">
               <label id="address-label" for="address">
                 Address:
                 <input 
@@ -30,55 +32,110 @@
                 id="address"
                 name="submitted-address" 
                 placeholder="Enter address here">
-              </label>  
+              </label>  <br>
+            </div>
+            <div class="email">
               <label id="email-label" for="email">Email:</label>
                 <input 
                   type="email" 
                   id="email"
                   required name="user_email" 
-                  placeholder="Enter email here">
+                  placeholder="Enter email here"><br>
+            </div>
+            <div class="number"> 
               <label id="number-label" for="number">Phone Number:</label>
-                <input
-                  type="number"
-                  id="number"
-                  name="user_number" 
-                  placeholder="Enter 10 digit number"
-                  min="1" max="9">
+                <input type="number" id="number" for="number" placeholder="Enter 10 digit number" min="1" max="10">
+                  <br>
+            </div>
+            <div class="iq">
               <label id="iq-label" for="number">IQ:
                 <input
                   type="number"
                   id="iq"
                   name="user_iq"
-                  placeholder="Enter IQ here"
-                >   
-              </label>  
-            
+                  placeholder="Enter IQ here">   
+              </label>  <br>
+            </div>
+            <div class="gender">  
               <label>Gender</label> 
-              <input 
-                type="radio"
-                id="male"
-                name="gender"
-                value="Male"
-              >
+              <input type="radio" id="male" name="gender" value="Male">
               <label>Male</label>
-              <input 
-                type="radio"
-                id="male"
-                name="gender"
-                value="Male"
-              >
-              <label>Female</label>
-
+              <input type="radio" id="male" name="gender" value="Male">
+              <label>Female</label><br>
+            </div>
+            <div class="date">
              <label>Date of Propsed Outing:</label> 
              <input type="date" id="date" name="date">
-          </fieldset>
-          
-          
+            </div>
+          </fieldset>  
         </div>
+<!----------- Check All That Apply ------------->
+        <div class="checks">
+          <fieldset class="fieldset-checks">
+
+            <legend>Check All That Apply</legend>
+
+            <input type="checkbox" id="" name="" value="tattoos-piercing">
+            <label for="">I have tattoos and/or piercings</label><br>
+
+            <input type="checkbox" id="" name="" value="older">
+            <label for="">I am more than 2 years older than your daughter</label><br>
+
+            <input type="checkbox" id="" name="" value="van">
+            <label for="">I own a panel van or V8 ute</label><br>
+
+            <input type="checkbox" id="" name="" value="work-full-time">
+            <label for="">I work full-time</label><br>
+
+            <input type="checkbox" id="" name="" value="rich-parents">
+            <label for="">My parents are rich</label><br>
+
+            <input type="checkbox" id="" name="" value="public-location">
+            <label for="">The date is at a well lit public location</label><br>
+          </fieldset>
+        </div>  
+<!----------- Political Persuasion ------------->        
+        <div class="political-section">
+          <fieldset class="fieldset-politics">
+            <label>Political Persuasion:</label>
+              <select id="politics" name="politics">
+                <option value="Left Wing">Left Wing</option>
+                <option value="Right Wing">Right Wing</option>
+                <option value="Conservative">Conservative</option>
+                <option value="Nazi">Nazi</option>
+              </select><br>
+            
+            <label>Education Level Completed:</label>
+              <select id="education" name="education">
+                <option value="university">University</option>
+                <option value="college">College</option>
+                <option value="high school">High School</option>
+                <option value="none">None</option>
+              </select>
+          </fieldset>
+        </div>
+      
+<!----------- Essay Section ------------->
+        <div class="essay-section">
+          <fieldset class="fieldset-essay">
+            <legend>Essay Section</legend>
+            <label for="msg"></label>
+            <p>In 50 words or more explain why you want to date my daughter</p>
+            <textarea rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+
+            <label for="msg"></label>
+            <p>Upload contact details for 2 references</p>
+            <textarea rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+
+            <p>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here: Attach Files</p>
+
+            <button type="submit" id="submit">Attach Files</button>
+          </fieldset>
+        </div>
+<!----------- Submit App ------------->
+          <button type="submit" id="application">Send Your Application</button>
       </form> 
     </div>
-
-
   </body>
 
 </html>
